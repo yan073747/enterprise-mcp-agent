@@ -1,0 +1,32 @@
+{
+  "name": "enterprise-mcp-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n MCP,API,WEB -c cyan,green,magenta \"npm run dev -w @enterprise/mcp-server\" \"npm run dev -w @enterprise/api-server\" \"npm run dev -w @enterprise/web\"",
+    "build": "npm run build -w @enterprise/shared && npm run build -w @enterprise/mcp-server && npm run build -w @enterprise/api-server && npm run build -w @enterprise/web",
+    "seed": "npm run seed -w @enterprise/mcp-server",
+    "seed:prod": "npm run seed:prod -w @enterprise/mcp-server",
+    "start": "node apps/api-server/dist/apps/api-server/src/index.js",
+    "test": "npm run test -w @enterprise/mcp-server && npm run test -w @enterprise/api-server",
+    "typecheck": "npm run typecheck -w @enterprise/shared && npm run typecheck -w @enterprise/mcp-server && npm run typecheck -w @enterprise/api-server && npm run typecheck -w @enterprise/web"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.13",
+    "concurrently": "^9.2.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "zod": "^3.25.76"
+  }
+}

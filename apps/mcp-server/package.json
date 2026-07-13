@@ -1,0 +1,19 @@
+{
+  "name": "@enterprise/mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "seed": "tsx src/seed.ts",
+    "seed:prod": "node dist/apps/mcp-server/src/seed.js",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@enterprise/shared": "file:../../packages/shared"
+  }
+}
