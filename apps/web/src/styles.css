@@ -40,6 +40,25 @@ button {
   padding: 12px 14px;
 }
 
+.back-link {
+  align-items: center;
+  border: 1px solid #d9ded5;
+  border-radius: 7px;
+  color: #121512;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 900;
+  min-height: 38px;
+  padding: 0 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.back-link:hover {
+  border-color: #0a7b57;
+  color: #0a7b57;
+}
+
 .brand,
 .top-actions,
 .pulse-line,
@@ -125,12 +144,14 @@ button {
 }
 
 h1 {
-  font-size: clamp(42px, 7vw, 84px);
-  line-height: 0.94;
+  font-size: clamp(38px, 4.2vw, 56px);
+  line-height: 1.06;
   letter-spacing: 0;
   margin: 0;
-  max-width: 900px;
-  overflow-wrap: anywhere;
+  max-width: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .hero-copy {
@@ -692,6 +713,9 @@ pre + pre {
     font-size: 32px;
     line-height: 1.14;
     max-width: 100%;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
     word-break: break-all;
   }
 
