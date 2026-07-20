@@ -385,7 +385,7 @@ function App() {
             <span>1</span>
             <div>
               <h2>业务请求</h2>
-              <p>选择面试演示脚本，观察 Agent 如何拆解工具调用。</p>
+              <p>选择业务请求，观察 Agent 如何拆解工具调用。</p>
             </div>
           </div>
 
