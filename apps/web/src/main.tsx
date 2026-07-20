@@ -341,6 +341,7 @@ function App() {
   return (
     <main className="app-shell">
       <header className="topbar">
+        <a className="back-link" href="https://www.aiworkbox.cn/demos/mcp-agent">← 返回作品集</a>
         <div className="brand">
           <div className="brand-mark">EA</div>
           <div>
