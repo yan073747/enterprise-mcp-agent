@@ -130,6 +130,7 @@ h1 {
   letter-spacing: 0;
   margin: 0;
   max-width: 900px;
+  overflow-wrap: anywhere;
 }
 
 .hero-copy {
@@ -648,10 +649,56 @@ pre + pre {
 }
 
 @media (max-width: 640px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-inline: 14px;
+  }
+
   .topbar,
   .history-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .brand,
+  .top-actions,
+  .hero,
+  .panel,
+  .metric-card,
+  .security-strip {
+    min-width: 0;
+  }
+
+  .hero > *,
+  .workspace-grid > *,
+  .bottom-grid > *,
+  .metrics-grid > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .top-actions {
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 1.14;
+    max-width: 100%;
+    word-break: break-all;
+  }
+
+  .hero-copy,
+  .section-title p,
+  .security-strip span {
+    overflow-wrap: anywhere;
   }
 
   .segmented {
