@@ -548,7 +548,7 @@ function App() {
 
       <section className="security-strip">
         <LockKeyhole size={18} />
-        <span>安全说明：此线上版本使用固定样例数据和前端模拟链路，不连接真实 CRM、数据库、OpenAI Key 或企业内部系统。</span>
+        <span>安全说明：此线上版本使用固定样例数据和前端模拟链路，不连接真实 CRM、数据库、OpenAI Key 或企业内部系统；工程版可接入真实 MCP Server、CRM、权限校验和审计日志。</span>
       </section>
     </main>
   );
