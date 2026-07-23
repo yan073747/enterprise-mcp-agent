@@ -682,10 +682,23 @@ pre + pre {
     padding-inline: 14px;
   }
 
-  .topbar,
   .history-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .topbar {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .back-link {
+    min-height: 34px;
+    padding: 0 10px;
+    font-size: 12px;
   }
 
   .brand,
@@ -697,6 +710,20 @@ pre + pre {
     min-width: 0;
   }
 
+  .brand > div {
+    min-width: 0;
+  }
+
+  .brand span {
+    display: none;
+  }
+
+  .brand strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .hero > *,
   .workspace-grid > *,
   .bottom-grid > *,
@@ -706,7 +733,18 @@ pre + pre {
   }
 
   .top-actions {
+    grid-column: 1 / -1;
+    width: 100%;
+    flex-wrap: nowrap;
     justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .top-actions span {
+    flex: 0 0 auto;
+    padding: 6px 9px;
+    font-size: 11px;
   }
 
   h1 {
